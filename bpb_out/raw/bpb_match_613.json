@@ -1,0 +1,391 @@
+{
+  "matchIndex": 613,
+  "rounds": [
+    {
+      "roundIndex": 1,
+      "result": "loss",
+      "gold": 39,
+      "items": {
+        "Relic Case": 1,
+        "Fanny Pack": 1,
+        "Leather Bag": 1,
+        "Wooden Sword": 1,
+        "Garlic": 1,
+        "Whetstone": 1,
+        "Jynx torquilla": 1,
+        "Piggybank": 1
+      }
+    },
+    {
+      "roundIndex": 2,
+      "result": "win",
+      "gold": 55,
+      "items": {
+        "Relic Case": 1,
+        "Fanny Pack": 1,
+        "Leather Bag": 3,
+        "Garlic": 2,
+        "Hero Sword": 1,
+        "Deck of Cards": 1,
+        "Ace of Spades": 1,
+        "Jynx torquilla": 1,
+        "Shiny Shell": 1,
+        "Stone": 1
+      }
+    },
+    {
+      "roundIndex": 3,
+      "result": "win",
+      "gold": 71,
+      "items": {
+        "Relic Case": 1,
+        "Fanny Pack": 1,
+        "Leather Bag": 4,
+        "Deck of Cards": 1,
+        "Jynx torquilla": 1,
+        "Oil Lamp": 1,
+        "Hero Sword": 1,
+        "Garlic": 3,
+        "Whetstone": 1,
+        "Smelly Wall": 1
+      }
+    },
+    {
+      "roundIndex": 4,
+      "result": "win",
+      "gold": 81,
+      "items": {
+        "Relic Case": 1,
+        "Fanny Pack": 1,
+        "Leather Bag": 5,
+        "Deck of Cards": 1,
+        "Jynx torquilla": 1,
+        "Oil Lamp": 1,
+        "Hero Sword": 1,
+        "Garlic": 3,
+        "Whetstone": 1,
+        "Smelly Wall": 1,
+        "Amulet of Darkness": 1
+      }
+    },
+    {
+      "roundIndex": 5,
+      "result": "win",
+      "gold": 79,
+      "items": {
+        "Relic Case": 1,
+        "Fanny Pack": 1,
+        "Leather Bag": 5,
+        "Spear": 1,
+        "Oil Lamp": 1,
+        "Garlic": 4,
+        "Leather Armor": 1,
+        "Smelly Wall": 1,
+        "Blueberries": 1,
+        "Fly Agaric": 1,
+        "Amulet of Darkness": 1
+      }
+    },
+    {
+      "roundIndex": 6,
+      "result": "win",
+      "gold": 80,
+      "items": {
+        "Relic Case": 1,
+        "Fanny Pack": 2,
+        "Leather Bag": 6,
+        "Oil Lamp": 1,
+        "Leather Armor": 1,
+        "Smelly Wall": 1,
+        "Garlic": 5,
+        "Spear": 1,
+        "Fly Agaric": 1
+      }
+    },
+    {
+      "roundIndex": 7,
+      "result": "win",
+      "gold": 89,
+      "items": {
+        "Relic Case": 1,
+        "Fanny Pack": 2,
+        "Leather Bag": 6,
+        "Spear": 1,
+        "Death Scythe": 1,
+        "Oil Lamp": 1,
+        "Garlic": 5,
+        "Leather Armor": 1,
+        "Smelly Wall": 1
+      }
+    },
+    {
+      "roundIndex": 8,
+      "result": "loss",
+      "gold": 107,
+      "items": {
+        "Relic Case": 1,
+        "Fanny Pack": 2,
+        "Leather Bag": 6,
+        "Spear": 1,
+        "Death Scythe": 1,
+        "Oil Lamp": 1,
+        "Garlic": 5,
+        "Leather Armor": 1,
+        "Smelly Wall": 1,
+        "Blood Amulet": 1,
+        "Nocturnal Lock Lifter": 1
+      }
+    },
+    {
+      "roundIndex": 9,
+      "result": "win",
+      "gold": 123,
+      "items": {
+        "Relic Case": 1,
+        "Fanny Pack": 3,
+        "Leather Bag": 7,
+        "Death Scythe": 1,
+        "Garlic": 6,
+        "Spear": 1,
+        "Oil Lamp": 1,
+        "Pestilence Flask": 1,
+        "Vampiric Armor": 1,
+        "Nocturnal Lock Lifter": 1,
+        "Smelly Wall": 1
+      }
+    },
+    {
+      "roundIndex": 10,
+      "result": "win",
+      "gold": 140,
+      "items": {
+        "Fanny Pack": 4,
+        "Leather Bag": 7,
+        "Relic Case": 1,
+        "Potion Belt": 1,
+        "Death Scythe": 1,
+        "Nocturnal Lock Lifter": 1,
+        "Oil Lamp": 1,
+        "Vampiric Armor": 1,
+        "Smelly Wall": 1,
+        "Garlic": 6,
+        "Shielded": 1,
+        "Healing Herbs": 1,
+        "Poison Spear": 1
+      }
+    },
+    {
+      "roundIndex": 11,
+      "result": "win",
+      "gold": 153,
+      "items": {
+        "Fanny Pack": 4,
+        "Leather Bag": 7,
+        "Relic Case": 1,
+        "Potion Belt": 1,
+        "Death Scythe": 1,
+        "Nocturnal Lock Lifter": 1,
+        "Oil Lamp": 1,
+        "Vampiric Armor": 1,
+        "Smelly Wall": 1,
+        "Garlic": 6,
+        "Shielded": 1,
+        "Poison Spear": 1,
+        "Amulet of the Wild": 1,
+        "Leather Armor": 1,
+        "Healing Herbs": 1
+      }
+    },
+    {
+      "roundIndex": 12,
+      "result": "win",
+      "gold": 170,
+      "items": {
+        "Fanny Pack": 4,
+        "Leather Bag": 7,
+        "Relic Case": 1,
+        "Potion Belt": 2,
+        "Death Scythe": 1,
+        "Nocturnal Lock Lifter": 1,
+        "Oil Lamp": 1,
+        "Vampiric Armor": 1,
+        "Smelly Wall": 1,
+        "Garlic": 6,
+        "Shielded": 1,
+        "Poison Spear": 1,
+        "Healing Herbs": 1,
+        "Leather Armor": 1,
+        "Stone Skin Potion": 1,
+        "Amulet of Energy": 1,
+        "Amulet of the Wild": 1
+      }
+    },
+    {
+      "roundIndex": 13,
+      "result": "win",
+      "gold": 184,
+      "items": {
+        "Fanny Pack": 5,
+        "Leather Bag": 7,
+        "Relic Case": 1,
+        "Potion Belt": 2,
+        "Death Scythe": 1,
+        "Nocturnal Lock Lifter": 1,
+        "Oil Lamp": 1,
+        "Smelly Wall": 1,
+        "Garlic": 6,
+        "Poison Spear": 1,
+        "Healing Herbs": 1,
+        "Amulet of the Wild": 1,
+        "Stone Armor": 1,
+        "Vampiric Armor": 1,
+        "Blood Amulet": 1,
+        "Amulet of Energy": 1,
+        "Shielded": 1,
+        "Fly Agaric": 1
+      }
+    },
+    {
+      "roundIndex": 14,
+      "result": "loss",
+      "gold": 195,
+      "items": {
+        "Fanny Pack": 5,
+        "Leather Bag": 7,
+        "Relic Case": 1,
+        "Potion Belt": 2,
+        "Protective Purse": 2,
+        "Death Scythe": 1,
+        "Nocturnal Lock Lifter": 1,
+        "Oil Lamp": 1,
+        "Smelly Wall": 1,
+        "Garlic": 6,
+        "Poison Spear": 1,
+        "Healing Herbs": 1,
+        "Amulet of the Wild": 1,
+        "Stone Armor": 1,
+        "Vampiric Armor": 1,
+        "Blood Amulet": 1,
+        "Amulet of Energy": 1,
+        "Shielded": 1,
+        "Fly Agaric": 1,
+        "Pestilence Flask": 1
+      }
+    },
+    {
+      "roundIndex": 15,
+      "result": "win",
+      "gold": 205,
+      "items": {
+        "Fanny Pack": 6,
+        "Leather Bag": 7,
+        "Relic Case": 1,
+        "Potion Belt": 2,
+        "Protective Purse": 2,
+        "Death Scythe": 1,
+        "Nocturnal Lock Lifter": 1,
+        "Oil Lamp": 1,
+        "Smelly Wall": 1,
+        "Garlic": 6,
+        "Poison Spear": 1,
+        "Healing Herbs": 1,
+        "Amulet of the Wild": 1,
+        "Strong Pestilence Flask": 1,
+        "Vampiric Armor": 1,
+        "Blood Amulet": 1,
+        "Amulet of Energy": 1,
+        "Stone Armor": 1,
+        "Cap of Resilience": 1,
+        "Shielded": 1
+      }
+    },
+    {
+      "roundIndex": 16,
+      "result": "loss",
+      "gold": 224,
+      "items": {
+        "Fanny Pack": 7,
+        "Leather Bag": 7,
+        "Relic Case": 1,
+        "Potion Belt": 2,
+        "Protective Purse": 3,
+        "Death Scythe": 1,
+        "Nocturnal Lock Lifter": 1,
+        "Oil Lamp": 1,
+        "Smelly Wall": 1,
+        "Garlic": 6,
+        "Poison Spear": 1,
+        "Healing Herbs": 1,
+        "Amulet of the Wild": 1,
+        "Strong Pestilence Flask": 1,
+        "Vampiric Armor": 1,
+        "Blood Amulet": 1,
+        "Amulet of Energy": 1,
+        "Stone Armor": 1,
+        "Corrupted Crystal": 1,
+        "Cap of Resilience": 1,
+        "Shielded": 1,
+        "Demonic Flask": 1
+      }
+    },
+    {
+      "roundIndex": 17,
+      "result": "win",
+      "gold": 236,
+      "items": {
+        "Fanny Pack": 7,
+        "Leather Bag": 7,
+        "Relic Case": 1,
+        "Potion Belt": 2,
+        "Protective Purse": 4,
+        "Death Scythe": 1,
+        "Nocturnal Lock Lifter": 1,
+        "Oil Lamp": 1,
+        "Smelly Wall": 1,
+        "Garlic": 6,
+        "Poison Spear": 1,
+        "Healing Herbs": 1,
+        "Amulet of the Wild": 1,
+        "Strong Pestilence Flask": 1,
+        "Vampiric Armor": 1,
+        "Blood Amulet": 1,
+        "Stone Armor": 1,
+        "Shielded": 1,
+        "Cap of Discomfort": 1,
+        "Demonic Flask": 1,
+        "Flute": 1,
+        "Gloves of Haste": 1,
+        "Amulet of Energy": 1
+      }
+    },
+    {
+      "roundIndex": 18,
+      "result": "loss",
+      "gold": 247,
+      "items": {
+        "Fanny Pack": 7,
+        "Leather Bag": 7,
+        "Relic Case": 1,
+        "Potion Belt": 2,
+        "Protective Purse": 4,
+        "Death Scythe": 1,
+        "Nocturnal Lock Lifter": 1,
+        "Oil Lamp": 1,
+        "Smelly Wall": 1,
+        "Garlic": 6,
+        "Poison Spear": 1,
+        "Amulet of the Wild": 1,
+        "Strong Pestilence Flask": 1,
+        "Vampiric Armor": 1,
+        "Stone Armor": 1,
+        "Cap of Discomfort": 1,
+        "Demonic Flask": 2,
+        "Flute": 1,
+        "Vampiric Gloves": 1,
+        "Shielded": 1,
+        "Amulet of Fortune": 1,
+        "Healing Herbs": 2
+      }
+    }
+  ]
+}

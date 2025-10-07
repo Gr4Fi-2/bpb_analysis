@@ -1,0 +1,392 @@
+{
+  "matchIndex": 67,
+  "rounds": [
+    {
+      "roundIndex": 1,
+      "result": "loss",
+      "gold": 41,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 1,
+        "Fly Agaric": 1,
+        "Garlic": 1,
+        "Banana": 1,
+        "Shiny Shell": 1,
+        "Wooden Sword": 1,
+        "Whetstone": 1
+      }
+    },
+    {
+      "roundIndex": 2,
+      "result": "win",
+      "gold": 52,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 2,
+        "Broom": 1,
+        "Garlic": 1,
+        "Fly Agaric": 1,
+        "Banana": 1,
+        "Shell Totem": 1,
+        "Piggybank": 1,
+        "Whetstone": 1
+      }
+    },
+    {
+      "roundIndex": 3,
+      "result": "win",
+      "gold": 70,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 3,
+        "Fanny Pack": 1,
+        "Broom": 1,
+        "Banana": 1,
+        "Piggybank": 1,
+        "Garlic": 2,
+        "Fly Agaric": 1,
+        "Shell Totem": 1,
+        "Power of the Moon": 1,
+        "Shiny Shell": 1,
+        "Health Potion": 1,
+        "Pocket Sand": 1
+      }
+    },
+    {
+      "roundIndex": 4,
+      "result": "loss",
+      "gold": 82,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 4,
+        "Fanny Pack": 2,
+        "Broom": 1,
+        "Garlic": 3,
+        "Fly Agaric": 1,
+        "Shelly": 1,
+        "Banana": 1,
+        "Shell Totem": 1,
+        "Power of the Moon": 1,
+        "Piggybank": 2,
+        "Pocket Sand": 1
+      }
+    },
+    {
+      "roundIndex": 5,
+      "result": "win",
+      "gold": 94,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Fanny Pack": 2,
+        "Broom": 1,
+        "Garlic": 2,
+        "Fly Agaric": 1,
+        "Shelly": 1,
+        "Banana": 1,
+        "Shell Totem": 1,
+        "Power of the Moon": 1,
+        "Piggybank": 1,
+        "Leather Armor": 1,
+        "Pocket Sand": 1,
+        "Stone Skin Potion": 1
+      }
+    },
+    {
+      "roundIndex": 6,
+      "result": "loss",
+      "gold": 107,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Fanny Pack": 2,
+        "Garlic": 1,
+        "Fly Agaric": 1,
+        "Shelly": 1,
+        "Shell Totem": 1,
+        "Power of the Moon": 1,
+        "Stone Armor": 1,
+        "Flawed Ruby": 1,
+        "Death Scythe": 1,
+        "Banana": 1,
+        "Piggybank": 1,
+        "Box of Riches": 1,
+        "Pocket Sand": 1
+      }
+    },
+    {
+      "roundIndex": 7,
+      "result": "win",
+      "gold": 112,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Fanny Pack": 2,
+        "Garlic": 1,
+        "Fly Agaric": 2,
+        "Power of the Moon": 1,
+        "Stone Armor": 1,
+        "Death Scythe": 1,
+        "Piggybank": 1,
+        "Box of Riches": 1,
+        "Corrupted Crystal": 1,
+        "Shelly": 1,
+        "Pestilence Flask": 1
+      }
+    },
+    {
+      "roundIndex": 8,
+      "result": "win",
+      "gold": 130,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Fanny Pack": 2,
+        "Piggybank": 1,
+        "Death Scythe": 2,
+        "Fly Agaric": 1,
+        "Cursed Dagger": 1,
+        "Strong Pestilence Flask": 1,
+        "Pestilence Flask": 1,
+        "Stone Armor": 1,
+        "Corrupted Crystal": 1,
+        "Power of the Moon": 1,
+        "Garlic": 1
+      }
+    },
+    {
+      "roundIndex": 9,
+      "result": "win",
+      "gold": 142,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Fanny Pack": 2,
+        "Stamina Sack": 1,
+        "Piggybank": 1,
+        "Death Scythe": 2,
+        "Cursed Dagger": 1,
+        "Strong Pestilence Flask": 2,
+        "Stone Armor": 1,
+        "Corrupted Crystal": 1,
+        "Power of the Moon": 1,
+        "Garlic": 1,
+        "Fly Agaric": 1,
+        "Health Potion": 1
+      }
+    },
+    {
+      "roundIndex": 10,
+      "result": "loss",
+      "gold": 159,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Potion Belt": 1,
+        "Fanny Pack": 2,
+        "Stamina Sack": 1,
+        "Death Scythe": 2,
+        "Strong Pestilence Flask": 2,
+        "Pestilence Flask": 1,
+        "Corrupted Crystal": 1,
+        "Cursed Dagger": 1,
+        "Demonic Flask": 1,
+        "Health Potion": 1,
+        "Fly Agaric": 1,
+        "Stone Armor": 1,
+        "Heavy Drinking": 1,
+        "Piggybank": 1
+      }
+    },
+    {
+      "roundIndex": 11,
+      "result": "win",
+      "gold": 173,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Potion Belt": 1,
+        "Fanny Pack": 2,
+        "Stamina Sack": 1,
+        "Death Scythe": 2,
+        "Strong Pestilence Flask": 3,
+        "Cursed Dagger": 1,
+        "Health Potion": 1,
+        "Corrupted Crystal": 1,
+        "Stone Armor": 1,
+        "Strong Demonic Flask": 1,
+        "Divine Potion": 1,
+        "Heavy Drinking": 1,
+        "Piggybank": 1
+      }
+    },
+    {
+      "roundIndex": 12,
+      "result": "win",
+      "gold": 188,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Potion Belt": 1,
+        "Fanny Pack": 2,
+        "Stamina Sack": 2,
+        "Death Scythe": 2,
+        "Strong Pestilence Flask": 3,
+        "Corrupted Crystal": 2,
+        "Stone Armor": 1,
+        "Divine Potion": 1,
+        "Cursed Dagger": 1,
+        "Strong Demonic Flask": 1,
+        "Health Potion": 1,
+        "Heavy Drinking": 1,
+        "Stone Skin Potion": 1
+      }
+    },
+    {
+      "roundIndex": 13,
+      "result": "win",
+      "gold": 202,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Potion Belt": 1,
+        "Fanny Pack": 3,
+        "Stamina Sack": 2,
+        "Death Scythe": 2,
+        "Strong Pestilence Flask": 3,
+        "Divine Potion": 1,
+        "Heavy Drinking": 1,
+        "Stone Skin Potion": 1,
+        "Health Potion": 2,
+        "Cursed Dagger": 1,
+        "Strong Demonic Flask": 1,
+        "Demonic Flask": 1,
+        "Corrupted Crystal": 2,
+        "Stone Armor": 1
+      }
+    },
+    {
+      "roundIndex": 14,
+      "result": "win",
+      "gold": 214,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Potion Belt": 2,
+        "Fanny Pack": 3,
+        "Stamina Sack": 2,
+        "Death Scythe": 2,
+        "Strong Pestilence Flask": 3,
+        "Divine Potion": 1,
+        "Heavy Drinking": 1,
+        "Stone Skin Potion": 1,
+        "Health Potion": 2,
+        "Cursed Dagger": 1,
+        "Strong Demonic Flask": 2,
+        "Corrupted Crystal": 1,
+        "Stone Armor": 1,
+        "Pestilence Flask": 1
+      }
+    },
+    {
+      "roundIndex": 15,
+      "result": "win",
+      "gold": 227,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Potion Belt": 2,
+        "Stamina Sack": 2,
+        "Fanny Pack": 3,
+        "Protective Purse": 1,
+        "Strong Pestilence Flask": 3,
+        "Death Scythe": 2,
+        "Divine Potion": 1,
+        "Heavy Drinking": 1,
+        "Stone Skin Potion": 1,
+        "Corrupted Crystal": 1,
+        "Stone Armor": 1,
+        "Strong Demonic Flask": 2,
+        "Cursed Dagger": 1,
+        "Health Potion": 3,
+        "Pestilence Flask": 2
+      }
+    },
+    {
+      "roundIndex": 16,
+      "result": "loss",
+      "gold": 241,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Potion Belt": 2,
+        "Stamina Sack": 3,
+        "Fanny Pack": 3,
+        "Protective Purse": 2,
+        "Strong Pestilence Flask": 3,
+        "Death Scythe": 2,
+        "Divine Potion": 1,
+        "Stone Skin Potion": 1,
+        "Health Potion": 3,
+        "Pestilence Flask": 2,
+        "Corrupted Crystal": 1,
+        "Stone Armor": 1,
+        "Demonic Flask": 1,
+        "Strong Demonic Flask": 2,
+        "Heavy Drinking": 1,
+        "Cursed Dagger": 1
+      }
+    },
+    {
+      "roundIndex": 17,
+      "result": "win",
+      "gold": 259,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Potion Belt": 2,
+        "Stamina Sack": 3,
+        "Fanny Pack": 4,
+        "Protective Purse": 2,
+        "Strong Pestilence Flask": 3,
+        "Death Scythe": 2,
+        "Divine Potion": 1,
+        "Stone Skin Potion": 1,
+        "Health Potion": 3,
+        "Pestilence Flask": 2,
+        "Stone Armor": 1,
+        "Strong Demonic Flask": 3,
+        "Cursed Dagger": 1,
+        "Snowball": 2,
+        "Heavy Drinking": 1,
+        "Cap of Resilience": 1
+      }
+    },
+    {
+      "roundIndex": 18,
+      "result": "win",
+      "gold": 268,
+      "items": {
+        "Storage Coffin": 1,
+        "Leather Bag": 5,
+        "Potion Belt": 2,
+        "Stamina Sack": 3,
+        "Fanny Pack": 4,
+        "Protective Purse": 3,
+        "Strong Pestilence Flask": 3,
+        "Death Scythe": 2,
+        "Divine Potion": 1,
+        "Stone Skin Potion": 1,
+        "Health Potion": 3,
+        "Pestilence Flask": 2,
+        "Stone Armor": 1,
+        "Strong Demonic Flask": 3,
+        "Cursed Dagger": 1,
+        "Snowball": 2,
+        "Heavy Drinking": 1,
+        "Cap of Resilience": 1,
+        "Demonic Flask": 1
+      }
+    }
+  ]
+}
