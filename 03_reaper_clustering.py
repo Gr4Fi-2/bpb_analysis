@@ -4,6 +4,9 @@ Reaper-only Final-Builds + Clustering (IDE One-Shot, filter fail-open).
 Wenn CLASS_REGEX None ist, wird NICHT gefiltert.
 Wenn CLASS_REGEX gesetzt ist, aber keine Matches findet, wird eine Warnung geloggt und OHNE Filter weitergemacht.
 Outputs: bpb_out/reaper_clusters_*.csv
+  - reaper_clusters_summary.csv
+  - reaper_clusters_core_items.csv (Lift- & Frequenz-Listen)
+  - reaper_clusters_item_stats.csv (Detailmetriken je Item x Cluster)
 """
 import os
 import duckdb
@@ -18,6 +21,12 @@ OUT_DIR        = "bpb_out"
 K              = 8
 MIN_ITEM_FREQ  = 15
 MAX_ITEMS      = 300
+# Core-Item-Heuristik (Items, die wirklich cluster-typisch sind)
+CORE_TOP_K             = 8
+CORE_MIN_CLUSTER_RATE  = 0.30   # Anteil der Matches im Cluster, die das Item haben
+CORE_MIN_LIFT          = 1.20   # Wie viel häufiger ggü. Gesamtmeta?
+CORE_MIN_COUNT         = 10     # absolute Häufigkeit im Cluster
+STAPLE_MAX_GLOBAL_RATE = 0.65   # filtert "Staples", die fast überall sind
 # Setze auf None, wenn du nicht filtern willst.
 CLASS_REGEX    = None  # z.B. r"reaper"  -> filtert nur Matches, die irgendwo ein Item mit 'reaper' enthalten
 # =======================================
@@ -94,27 +103,70 @@ def build_matrix(df, min_item_freq=20, max_items=250):
     last_r = last_r.reindex(mat.index)
     return mat, result, last_r, freq
 
-def tfidf_core_items(mat_df, labels):
-    clusters = sorted(labels.unique())
-    N = len(clusters)
-    result = {}
+def cluster_item_stats(mat_df, labels):
+    """Berechne pro Cluster Item-Raten, Lift usw."""
+    overall_rate = mat_df.mean(axis=0)
+    overall_count = mat_df.sum(axis=0)
 
-    # Dokumentfrequenz je Item über Cluster
-    df_item = {}
-    for c in clusters:
-        rows = mat_df[labels == c]
-        present = (rows.sum(axis=0) > 0).astype(int)
-        for item, present_flag in present.items():
-            df_item[item] = df_item.get(item, 0) + int(present_flag)
+    rows = []
+    for c in sorted(labels.unique()):
+        cluster_rows = mat_df[labels == c]
+        if cluster_rows.empty:
+            continue
 
-    idf = {item: np.log((N + 1) / (df_item.get(item, 0) + 1)) + 1.0 for item in mat_df.columns}
-    for c in clusters:
-        rows = mat_df[labels == c]
-        tf = rows.sum(axis=0) / max(1, rows.shape[0])
-        score = tf * pd.Series({k: idf[k] for k in mat_df.columns})
-        top = score.sort_values(ascending=False).head(12)
-        result[c] = list(top.index)
-    return result
+        cluster_rate = cluster_rows.mean(axis=0)
+        cluster_count = cluster_rows.sum(axis=0)
+        # Lift = Anteil im Cluster im Verhältnis zur Gesamt-Verbreitung.
+        with np.errstate(divide="ignore", invalid="ignore"):
+            lift = cluster_rate / overall_rate.replace(0, np.nan)
+            lift = lift.replace([np.inf, -np.inf], np.nan).fillna(0.0)
+
+        rate_advantage = cluster_rate - overall_rate
+
+        tmp = pd.DataFrame({
+            "cluster": c,
+            "item": mat_df.columns,
+            "cluster_rate": cluster_rate.values,
+            "cluster_count": cluster_count.values,
+            "overall_rate": overall_rate.values,
+            "overall_count": overall_count.values,
+            "lift": lift.values,
+            "rate_advantage": rate_advantage.values,
+        })
+        rows.append(tmp)
+
+    if not rows:
+        return pd.DataFrame(columns=["cluster", "item", "cluster_rate", "cluster_count", "overall_rate", "overall_count", "lift", "rate_advantage"])
+
+    return pd.concat(rows, ignore_index=True)
+
+
+def select_core_items(stats_df):
+    """Filtere cluster-typische Items mithilfe eines Lift-Heuristik."""
+    result_lift = {}
+    result_freq = {}
+
+    for cluster_id, group in stats_df.groupby("cluster"):
+        group_sorted_freq = group.sort_values(["cluster_rate", "cluster_count"], ascending=False)
+        result_freq[cluster_id] = group_sorted_freq.head(CORE_TOP_K)["item"].tolist()
+
+        eligible = group[
+            (group["cluster_rate"] >= CORE_MIN_CLUSTER_RATE)
+            & (group["cluster_count"] >= CORE_MIN_COUNT)
+            & (group["lift"] >= CORE_MIN_LIFT)
+        ]
+
+        if STAPLE_MAX_GLOBAL_RATE is not None:
+            eligible = eligible[eligible["overall_rate"] <= STAPLE_MAX_GLOBAL_RATE]
+
+        if eligible.empty:
+            shortlisted = group_sorted_freq.head(CORE_TOP_K)
+        else:
+            shortlisted = eligible.sort_values(["lift", "cluster_rate", "cluster_count"], ascending=False).head(CORE_TOP_K)
+
+        result_lift[cluster_id] = shortlisted["item"].tolist()
+
+    return result_lift, result_freq
 
 # ---- Main logic ----
 df = fetch_final_items(con, CLASS_REGEX)
@@ -153,19 +205,30 @@ for c in range(K):
 
 summary = pd.DataFrame(out_rows).sort_values(["winrate_pct", "n_matches"], ascending=[False, False])
 
-# Kern-Items pro Cluster
-cores = tfidf_core_items(pd.DataFrame(mat.values, index=mat.index, columns=mat.columns), labels)
-top_items = [{"cluster": c, "core_items_top12": items} for c, items in cores.items()]
+# Cluster-Item-Statistiken & Kern-Items
+mat_df = pd.DataFrame(mat.values, index=mat.index, columns=mat.columns)
+stats_df = cluster_item_stats(mat_df, labels)
+core_by_lift, core_by_freq = select_core_items(stats_df)
+top_items_rows = []
+for c in sorted(labels.unique()):
+    top_items_rows.append({
+        "cluster": c,
+        "core_items_lift": core_by_lift.get(c, []),
+        "top_items_freq": core_by_freq.get(c, []),
+    })
 
 # Outputs
 summary_path = os.path.join(OUT_DIR, "reaper_clusters_summary.csv")
 items_path   = os.path.join(OUT_DIR, "reaper_clusters_core_items.csv")
 assign_path  = os.path.join(OUT_DIR, "reaper_clusters_assignment.csv")
+stats_path   = os.path.join(OUT_DIR, "reaper_clusters_item_stats.csv")
 
 summary.to_csv(summary_path, index=False)
-pd.DataFrame(top_items).to_csv(items_path, index=False)
+pd.DataFrame(top_items_rows).to_csv(items_path, index=False)
 pd.DataFrame({"match_id": labels.index, "cluster": labels.values}).to_csv(assign_path, index=False)
+stats_df.to_csv(stats_path, index=False)
 
 print("wrote:", summary_path)
 print("wrote:", items_path)
 print("wrote:", assign_path)
+print("wrote:", stats_path)
