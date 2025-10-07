@@ -1,2 +1,3 @@
 ./bpb_out/raw/*
-.venv/**/*
+.venv
+.idea
