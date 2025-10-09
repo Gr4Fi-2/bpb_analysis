@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans
 from pathlib import Path
 import numpy as np
 
-CSV = "relative_winrate_by_round.csv"     # Pfad bei dir anpassen, falls nötig
+CSV = "bpb_out/relative_winrate_by_round.csv"     # Pfad bei dir anpassen, falls nötig
 OUT_DIR = Path("bpb_out/winrate_facets")
 OUT_DIR.mkdir(exist_ok=True)
 
